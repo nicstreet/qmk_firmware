@@ -1,0 +1,13 @@
+#define KC_TD1 TD(TD_ENG)
+#define KC_TD2 TD(TD_WIN)
+#define KC_TD3 TD(TD_QIT)
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+  //Tap once for change track, twice for play
+  [TD_MSK]  = ACTION_TAP_DANCE_DOUBLE(KC_MNXT, KC_MPLY),
+  [TD_ENG]  = ACTION_TAP_DANCE_DOUBLE(KC_NUHS, S(KC_NUHS)),
+  [TD_WIN]  = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, LGUI(KC_E)),
+  [TD_QIT]  = ACTION_TAP_DANCE_DOUBLE(KC_RALT, LALT(KC_F4)),
+ 
+// Other declarations would go here, separated by commas, if you have them
+};
